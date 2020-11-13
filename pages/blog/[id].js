@@ -1,17 +1,24 @@
 import styles from "../../styles/Home.module.scss";
+import Head from "next/head";
 
 export default function BlogId({ blog }) {
   return (
-    <main className={styles.main}>
-      <h1 className={styles.title}>{blog.title}</h1>
-      <p className={styles.publishedAt}>{blog.publishedAt}</p>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: `${blog.detail}`,
-        }}
-        className={styles.post}
-      />
-    </main>
+    <>
+      <Head>
+        <title>{blog.title} | My blog</title>
+        <meta name="description" content="this is myblog" />
+      </Head>
+      <main className={styles.main}>
+        <h1 className={styles.title}>{blog.title}</h1>
+        <p className={styles.publishedAt}>{blog.publishedAt}</p>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `${blog.detail}`,
+          }}
+          className={styles.post}
+        />
+      </main>
+    </>
   );
 }
 

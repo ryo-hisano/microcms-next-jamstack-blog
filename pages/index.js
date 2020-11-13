@@ -1,18 +1,27 @@
 import Link from "next/link";
+import Head from "next/head";
+import Home2 from "./index2";
 
 export default function Home({ blog }) {
   return (
-    <div>
-      {blog.map((blog) => (
-        <ul key={blog.id}>
-          <li>
-            <Link href={`blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        </ul>
-      ))}
-    </div>
+    <>
+      <Head>
+        <title>My blog</title>
+        <meta name="description" content="this is myblog" />
+      </Head>
+      <div>
+        {blog.map((blog) => (
+          <ul key={blog.id}>
+            <li>
+              <Link href={`blog/${blog.id}`}>
+                <a>{blog.title}</a>
+              </Link>
+            </li>
+          </ul>
+        ))}
+        <Home2 />
+      </div>
+    </>
   );
 }
 
