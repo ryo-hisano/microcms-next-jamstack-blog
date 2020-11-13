@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
-import Home2 from "./index2";
+import Star from "./star";
+import Star2 from "./star2";
 
 export default function Home({ blog }) {
   return (
@@ -10,6 +11,9 @@ export default function Home({ blog }) {
         <meta name="description" content="this is myblog" />
       </Head>
       <div>
+        <Link href="blog/">
+          <a>ブログへリンク</a>
+        </Link>
         {blog.map((blog) => (
           <ul key={blog.id}>
             <li>
@@ -19,7 +23,8 @@ export default function Home({ blog }) {
             </li>
           </ul>
         ))}
-        <Home2 />
+        <Star />
+        <Star2 />
       </div>
     </>
   );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Home2() {
+export default function Star() {
   const [stars, setStars] = useState(0);
   useEffect(async () => {
     try {
@@ -12,5 +12,5 @@ export default function Home2() {
     }
   });
 
-  return <div>Next.jsのスター数：{stars}</div>;
+  return <div>Next.jsのスター数（useEffect）：{stars}</div>;
 }
