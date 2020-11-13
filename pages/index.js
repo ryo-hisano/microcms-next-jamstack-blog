@@ -14,6 +14,7 @@ export default function Home({ blog }) {
         <Link href="blog/">
           <a>ブログへリンク</a>
         </Link>
+        <p>▼microCMSから（getStaticProps）▼</p>
         {blog.map((blog) => (
           <ul key={blog.id}>
             <li>
