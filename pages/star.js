@@ -12,5 +12,5 @@ export default function Star() {
     }
   });
 
-  return <div>Next.jsのスター数（useEffect）：{stars}</div>;
+  return <div>▼Next.jsのスター数（useEffect）：{stars}▼</div>;
 }

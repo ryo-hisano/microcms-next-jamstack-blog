@@ -11,8 +11,8 @@ export default function Home({ blog }) {
         <meta name="description" content="this is myblog" />
       </Head>
       <div>
-        <Link href="blog/">
-          <a>ブログへリンク</a>
+        <Link href="about/">
+          <a>別ページへ</a>
         </Link>
         <p>▼microCMSから（getStaticProps）▼</p>
         {blog.map((blog) => (
