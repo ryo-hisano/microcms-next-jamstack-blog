@@ -1,5 +1,5 @@
 module.exports = {
-  basePath: "/next",
+  //basePath: "/next",
   target: "serverless",
   trailingSlash: true,
   generateEtags: false,

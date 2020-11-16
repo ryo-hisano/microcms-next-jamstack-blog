@@ -16,6 +16,15 @@ export default function Home({ blog }) {
           <a>別ページへ</a>
         </Link>
         <p>▼microCMSから（getStaticProps）▼</p>
+        {blog.map((blog) => (
+          <ul key={blog.id}>
+            <li>
+              <Link href={`blog/${blog.id}`}>
+                <a>{blog.title}</a>
+              </Link>
+            </li>
+          </ul>
+        ))}
         <p>
           ビルド時にヘッドレスCMSから取得したデータを流し込む。
           <br />
@@ -27,15 +36,6 @@ export default function Home({ blog }) {
           <br />
           親ページからのみ利用可能。
         </p>
-        {blog.map((blog) => (
-          <ul key={blog.id}>
-            <li>
-              <Link href={`blog/${blog.id}`}>
-                <a>{blog.title}</a>
-              </Link>
-            </li>
-          </ul>
-        ))}
         <hr />
         <Star />
         <p>副作用フック（今回はページ開いた際に初回のみ実行）。</p>
@@ -50,7 +50,7 @@ export default function Home({ blog }) {
         </p>
         <hr />
         <Star3 />
-        <p>SWRはのオプション指定で3秒ごとにリクエスト。</p>
+        <p>SWRのオプション指定で3秒ごとにリクエスト。</p>
       </div>
     </>
   );
