@@ -7,7 +7,7 @@ export default function Header() {
         <h1 className="title">
           <Link href="/">
             <a>
-              <img src="/next/logo.png" width="200" />
+              <img src="/logo.png" width="200" />
             </a>
           </Link>
         </h1>
