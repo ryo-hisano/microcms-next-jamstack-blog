@@ -12,7 +12,7 @@ export default function Star2() {
 
   if (error) return <div>failed to load</div>;
   if (!data) return <div>loading...</div>;
-  console.log(data.articles);
+
   return (
     <div>
       <style jsx>{`
@@ -29,7 +29,7 @@ export default function Star2() {
           align-items: center;
         }
       `}</style>
-      <p>▼GNews APIから{data.totalArticles}件表示（SWR）▼</p>
+      <p>▼GNews APIから{data.totalArticles}件中10件表示（SWR）▼</p>
       {data.articles.map((blog) => (
         <ul key={blog.id}>
           <li>

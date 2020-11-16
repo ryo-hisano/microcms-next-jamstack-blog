@@ -3,6 +3,15 @@ import Link from "next/link";
 export default function Header() {
   return (
     <div>
+      <header>
+        <h1 className="title">
+          <Link href="/">
+            <a>
+              <img src="/next/logo.png" width="200" />
+            </a>
+          </Link>
+        </h1>
+      </header>
       <style jsx>{`
         h1 {
           color: gray;
@@ -21,21 +30,6 @@ export default function Header() {
           }
         }
       `}</style>
-      <header>
-        <section className="hero is-dark">
-          <div className="hero-body">
-            <div className="container">
-              <h1 className="title">
-                <Link href="/">
-                  <a>
-                    <img src="/next/logo.png" width="200" />
-                  </a>
-                </Link>
-              </h1>
-            </div>
-          </div>
-        </section>
-      </header>
     </div>
   );
 }
